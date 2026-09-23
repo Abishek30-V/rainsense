@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { X, Cloud, CloudRain, CloudSun, Sun, Droplets, CalendarDays } from 'lucide-react';
-import { useLanguage } from '../../contexts/LanguageContext';
 import { useWeatherContext } from '../../contexts/WeatherContext';
 import { cn } from '../../lib/utils';
 
@@ -10,7 +9,6 @@ interface ForecastModalProps {
 }
 
 export function ForecastModal({ isOpen, onClose }: ForecastModalProps) {
-  const { t } = useLanguage();
   const { weather, isLoading } = useWeatherContext();
   const [mounted, setMounted] = useState(false);
 

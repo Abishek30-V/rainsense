@@ -101,8 +101,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'alerts.toggle': 'Voice Alerts',
     'alerts.language': 'Alert Language',
     'alerts.test': 'Test Voice Alert',
-    'alerts.on': 'On',
-    'alerts.off': 'Off',
     
     // Settings Page
     'nav.settings': 'Settings',
@@ -233,8 +231,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'alerts.toggle': 'குரல் எச்சரிக்கைகள்',
     'alerts.language': 'எச்சரிக்கை மொழி',
     'alerts.test': 'குரல் எச்சரிக்கையை சோதிக்க',
-    'alerts.on': 'இயக்கம்',
-    'alerts.off': 'நிறுத்தம்',
 
     // Settings Page
     'nav.settings': 'அமைப்புகள்',

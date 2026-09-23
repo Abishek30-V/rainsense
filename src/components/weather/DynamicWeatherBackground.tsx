@@ -1,5 +1,4 @@
-import { cn } from '../../lib/utils';
-import { Sun, CloudRain, Cloud } from 'lucide-react';
+import { Sun, Cloud } from 'lucide-react';
 
 export function DynamicWeatherBackground({ conditionCode }: { conditionCode: string }) {
   if (!conditionCode) return null;

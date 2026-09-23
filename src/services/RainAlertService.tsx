@@ -6,7 +6,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 export function RainAlertService() {
   const { weather, timeline } = useWeatherContext();
   const { settings } = useSettings();
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
   const lastAlertTime = useRef<number>(0);
 
   useEffect(() => {

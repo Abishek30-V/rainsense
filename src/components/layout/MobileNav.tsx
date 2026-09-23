@@ -5,11 +5,9 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { cn } from '../../lib/utils';
 
 export function MobileNav({ 
-  onOpenFullMap,
-  onOpenForecast
+  onOpenFullMap
 }: { 
   onOpenFullMap?: () => void;
-  onOpenForecast?: () => void;
 }) {
   const { t } = useLanguage();
   const navigate = useNavigate();
