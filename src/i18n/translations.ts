@@ -104,6 +104,16 @@ export const translations: Record<Language, Record<string, string>> = {
     'alerts.on': 'On',
     'alerts.off': 'Off',
     
+    // Settings Page
+    'nav.settings': 'Settings',
+    'settings.alerts': 'Alert Preferences',
+    'settings.pushNotifications': 'Push Notifications',
+    'settings.pushDesc': 'Get silent system alerts before rain starts.',
+    'settings.voiceAlerts': 'Voice Alerts',
+    'settings.voiceDesc': 'Have rain warnings read out loud to you.',
+    'settings.notifEnabled': 'Push Notifications enabled!',
+    'settings.voiceEnabled': 'Voice alerts enabled!',
+    
     // Classifications
     'status.approaching': 'APPROACHING',
     'status.uncertain': 'UNCERTAIN',
@@ -225,6 +235,16 @@ export const translations: Record<Language, Record<string, string>> = {
     'alerts.test': 'குரல் எச்சரிக்கையை சோதிக்க',
     'alerts.on': 'இயக்கம்',
     'alerts.off': 'நிறுத்தம்',
+
+    // Settings Page
+    'nav.settings': 'அமைப்புகள்',
+    'settings.alerts': 'எச்சரிக்கை விருப்பங்கள்',
+    'settings.pushNotifications': 'அறிவிப்புகள்',
+    'settings.pushDesc': 'மழை தொடங்கும் முன் சிஸ்டம் அறிவிப்புகளைப் பெறவும்.',
+    'settings.voiceAlerts': 'குரல் அறிவிப்புகள்',
+    'settings.voiceDesc': 'மழை எச்சரிக்கைகளை சத்தமாக படிக்கச் செய்யவும்.',
+    'settings.notifEnabled': 'அறிவிப்புகள் இயக்கப்பட்டுள்ளன!',
+    'settings.voiceEnabled': 'குரல் அறிவிப்புகள் இயக்கப்பட்டுள்ளன!',
 
     // Classifications
     'status.approaching': 'நெருங்குகிறது',

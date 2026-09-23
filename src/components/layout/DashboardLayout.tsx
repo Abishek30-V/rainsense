@@ -8,9 +8,11 @@ import { PwaUpdateToast } from './PwaUpdateToast';
 
 interface DashboardLayoutProps {
   children: ReactNode;
+  onOpenFullMap?: () => void;
+  onOpenForecast?: () => void;
 }
 
-export function DashboardLayout({ children }: DashboardLayoutProps) {
+export function DashboardLayout({ children, onOpenFullMap, onOpenForecast }: DashboardLayoutProps) {
   const { isOffline } = usePWA();
   const { t } = useLanguage();
 
@@ -30,7 +32,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       </main>
 
       <PwaUpdateToast />
-      <MobileNav />
+      <MobileNav onOpenFullMap={onOpenFullMap} onOpenForecast={onOpenForecast} />
     </div>
   );
 }

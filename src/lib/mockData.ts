@@ -42,6 +42,7 @@ export interface DailyItem {
   prob: number;
   low: number;
   high: number;
+  wind: number;
   isToday?: boolean;
 }
 

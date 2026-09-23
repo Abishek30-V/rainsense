@@ -8,57 +8,22 @@ import { NearbyRainCard } from './components/rain/NearbyRainCard';
 import { RainMap } from './components/rain/RainMap';
 import { RainTimeline } from './components/rain/RainTimeline';
 import { VoiceAlertCard } from './components/rain/VoiceAlertCard';
-import { FullMapModal } from './components/rain/FullMapModal';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Dashboard } from './pages/Dashboard';
+import { ForecastPage } from './pages/ForecastPage';
+import { SettingsPage } from './pages/SettingsPage';
+import { RainAlertService } from './services/RainAlertService';
 
 function App() {
-  const [isFullMapOpen, setIsFullMapOpen] = useState(false);
-
   return (
-    <>
-      <DashboardLayout>
-        <div className="w-full flex-1 flex flex-col xl:flex-row gap-6">
-
-          {/* Left Column — Main Weather */}
-          <div className="w-full xl:w-8/12 flex flex-col gap-5">
-            <CurrentWeatherCard />
-
-            {/* Rain Near You — visible on mobile/tablet, hidden on xl */}
-            <div className="xl:hidden">
-              <NearbyRainCard onViewMap={() => setIsFullMapOpen(true)} />
-            </div>
-
-            <HourlyForecast />
-
-            {/* Map + right-side rain cards for tablet — hidden on xl */}
-            <div className="xl:hidden flex flex-col gap-5">
-              <RainMap onViewFullMap={() => setIsFullMapOpen(true)} />
-              <RainTimeline />
-              <VoiceAlertCard />
-            </div>
-
-            <DailyForecast />
-            <WeatherDetailsGrid />
-          </div>
-
-          {/* Right Column — Rain Intelligence, xl+ only */}
-          <div className="hidden xl:flex w-full xl:w-4/12 flex-col gap-5">
-            <NearbyRainCard onViewMap={() => setIsFullMapOpen(true)} />
-            <RainTimeline />
-            <VoiceAlertCard />
-          </div>
-
-        </div>
-
-        {/* Full-width Rain Map — xl+ only, below main columns */}
-        <div className="hidden xl:block w-full">
-          <RainMap onViewFullMap={() => setIsFullMapOpen(true)} />
-        </div>
-
-      </DashboardLayout>
-
-      {/* Full Screen Map Modal */}
-      <FullMapModal isOpen={isFullMapOpen} onClose={() => setIsFullMapOpen(false)} />
-    </>
+    <BrowserRouter>
+      <RainAlertService />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/forecast" element={<ForecastPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
