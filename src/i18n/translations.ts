@@ -103,7 +103,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'alerts.test': 'Test Voice Alert',
     
     // Settings Page
-    'nav.settings': 'Settings',
     'settings.alerts': 'Alert Preferences',
     'settings.pushNotifications': 'Push Notifications',
     'settings.pushDesc': 'Get silent system alerts before rain starts.',
@@ -233,7 +232,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'alerts.test': 'குரல் எச்சரிக்கையை சோதிக்க',
 
     // Settings Page
-    'nav.settings': 'அமைப்புகள்',
     'settings.alerts': 'எச்சரிக்கை விருப்பங்கள்',
     'settings.pushNotifications': 'அறிவிப்புகள்',
     'settings.pushDesc': 'மழை தொடங்கும் முன் சிஸ்டம் அறிவிப்புகளைப் பெறவும்.',

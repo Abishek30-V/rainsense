@@ -30,7 +30,7 @@ export function ForecastModal({ isOpen, onClose }: ForecastModalProps) {
   const weekMin = daily.length ? Math.min(...daily.map((d) => d.low)) : 0;
   const weekMax = daily.length ? Math.max(...daily.map((d) => d.high)) : 100;
 
-  const getIcon = (name: string, isToday: boolean) => {
+  const getIcon = (name: string) => {
     const props = {
       size: 28,
       className: cn(
@@ -136,7 +136,7 @@ export function ForecastModal({ isOpen, onClose }: ForecastModalProps) {
                   {/* Icon & Prob */}
                   <div className="flex items-center justify-center gap-2 w-16 shrink-0">
                     <div className="relative group">
-                      {getIcon(day.icon, isToday)}
+                      {getIcon(day.icon)}
                       {day.prob > 0 && (
                         <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-0.5 text-[10px] font-bold text-sky-500 bg-sky-50 dark:bg-sky-950/80 px-1.5 rounded-full ring-1 ring-white dark:ring-slate-900">
                           <Droplets size={8} />
